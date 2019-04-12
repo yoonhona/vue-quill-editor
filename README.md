@@ -1,3 +1,10 @@
+기존 프로젝트가 1년간 업데이트 되지 않아 오류수정을 위해 기존 repository fork하여 npm publish 함
+
+- 수정사항
+  - br 태그를 제거하는 부분 삭제
+
+-------
+
 [![GitHub stars](https://img.shields.io/github/stars/surmon-china/vue-quill-editor.svg?style=flat-square)](https://github.com/surmon-china/vue-quill-editor/stargazers)
 [![Build Status](https://travis-ci.org/surmon-china/vue-quill-editor.svg?branch=master)](https://travis-ci.org/surmon-china/vue-quill-editor)
 [![GitHub issues](https://img.shields.io/github/issues/surmon-china/vue-quill-editor.svg?style=flat-square)](https://github.com/surmon-china/vue-quill-editor/issues)
@@ -116,13 +123,13 @@ Quill.register('modules/yourQuillModule', yourQuillModule)
 <!-- You can custom the "myQuillEditor" name used to find the quill instance in current component -->
 <template>
   <!-- bidirectional data binding（双向数据绑定） -->
-  <div class="quill-editor" 
+  <div class="quill-editor"
        v-model="content"
        v-quill:myQuillEditor="editorOption">
   </div>
 
   <!-- Or manually control the data synchronization（手动控制数据流）  -->
-  <div class="quill-editor" 
+  <div class="quill-editor"
        :content="content"
        @change="onEditorChange($event)"
        v-quill:myQuillEditor="editorOption">
@@ -178,7 +185,7 @@ Quill.register('modules/yourQuillModule', yourQuillModule)
   import Quill from 'quill'
   import { someModule } from '../yourModulePath/someQuillModule.js'
   Quill.register('modules/someModule', someModule)
-  
+
   export default {
     data () {
       return {
